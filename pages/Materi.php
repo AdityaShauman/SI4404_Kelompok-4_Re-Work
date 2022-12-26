@@ -5,21 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Services - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
 </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md sticky-top navbar-shrink py-3" id="mainNav">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1"><img src="assets/img/LOGO.png" width="86" height="35">
+            <div class="collapse navbar-collapse" id="navcol-1"><img src="../assets/img/LOGO.png" width="86" height="35">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="Materi.html">Materi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pelatihan.html">Pelatihan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="infoloker2.html">Info Loker</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
-                </ul><a class="btn btn-warning shadow" role="button" href="signup.html">Sign up</a>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Materi.php">Materi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pelatihan.php">Pelatihan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="infoloker2.php">Info Loker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.php">Contacts</a></li>
+                </ul><a class="btn btn-warning shadow" role="button" href="signup.php">Sign up</a>
             </div>
         </div>
     </nav>
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                <div class="col mb-5"><img class="rounded img-fluid shadow" src="assets/img/products/1.jpg"></div>
+                <div class="col mb-5"><img class="rounded img-fluid shadow" src="../assets/img/products/1.jpg"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                     <div>
                         <h5 class="fw-bold">Lorem ipsum dolor sit&nbsp;</h5>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" src="assets/img/products/2.jpg"></div>
+                <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" src="../assets/img/products/2.jpg"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                     <div>
                         <h5 class="fw-bold">Lorem ipsum dolor sit&nbsp;</h5>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                <div class="col mb-5"><img class="rounded img-fluid shadow" src="assets/img/products/3.jpg"></div>
+                <div class="col mb-5"><img class="rounded img-fluid shadow" src="../assets/img/products/3.jpg"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                     <div>
                         <h5 class="fw-bold">Lorem ipsum dolor sit&nbsp;</h5>
@@ -88,7 +88,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
-                    <div class="fw-bold d-flex align-items-center mb-2"></div><img src="assets/img/LOGO.png" width="86" height="35">
+                    <div class="fw-bold d-flex align-items-center mb-2"></div><img src="../assets/img/LOGO.png" width="86" height="35">
                     <p class="text-muted">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
                 </div>
             </div>
@@ -109,8 +109,8 @@
             </div>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bold-and-bright.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bold-and-bright.js"></script>
 </body>
 
 </html>

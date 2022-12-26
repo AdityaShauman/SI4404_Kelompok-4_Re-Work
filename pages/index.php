@@ -4,27 +4,145 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Contacts - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
 </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md sticky-top navbar-shrink py-3" id="mainNav">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1"><img src="assets/img/LOGO.png" width="86" height="35">
+            <div class="collapse navbar-collapse" id="navcol-1"><img src="../assets/img/LOGO.png" width="86" height="35">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Materi.html">Materi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pelatihan.html">Pelatihan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="infoloker2.html">Info Loker</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contacts.html">Contacts</a></li>
-                </ul><a class="btn btn-warning shadow" role="button" href="signup.html">Sign up</a>
+                    <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Materi.php">Materi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pelatihan.php">Pelatihan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="infoloker2.php">Info Loker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.php">Contacts</a></li>
+                </ul><a class="btn btn-warning shadow" role="button" href="signup.php">Sign up</a>
             </div>
         </div>
     </nav>
+    <header class="bg-primary-gradient">
+        <div class="container pt-4 pt-xl-5">
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img class="w-100 d-block" src="../assets/img/C3.jpg" alt="Slide Image"></div>
+                    <div class="carousel-item"><img class="w-100 d-block" src="../assets/img/C1.jpg" alt="Slide Image"></div>
+                    <div class="carousel-item"><img class="w-100 d-block" src="../assets/img/C2.jpg" alt="Slide Image"></div>
+                </div>
+                <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+                </ol>
+            </div>
+            <div class="row pt-5">
+                <div class="col-md-8 col-xl-6 text-center text-md-start mx-auto">
+                    <div class="text-center">
+                        <p class="fw-bold text-success mb-2">Platform Pelatihan Kerja #1</p>
+                        <h1 class="fw-bold">Solusi Terbaik Untuk Mempersiapkan Kerja</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <section class="py-5">
+        <div class="container text-center py-5">
+            <p class="mb-4" style="font-size: 1.6rem;">Telah digunakan&nbsp;<span class="bg-success-light p-1"><strong>5000+</strong></span>&nbsp;angkatan siap kerja.</p><a href="#"> </a><a href="#"> </a><a href="#"> </a><a href="#"> </a><a href="#"> </a><a href="#"> </a>
+        </div>
+    </section>
+    <section>
+        <div class="container bg-primary-gradient py-5">
+            <div class="row">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">Pelayanan Kami</p>
+                    <h3 class="fw-bold">Solusi meningkatakan skill &amp; portfolio anda</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
         <div class="container py-5">
+            <div class="mx-auto" style="max-width: 900px;">
+                <div class="row row-cols-1 row-cols-md-2 d-flex justify-content-center">
+                    <div class="col mb-4">
+                        <div class="card bg-primary-light">
+                            <div class="card-body text-center px-4 py-5 px-md-5">
+                                <p class="fw-bold text-primary card-text mb-2">Materi</p>
+                                <h5 class="fw-bold card-title mb-3"><br>Akses berbagai materi&nbsp; yang dapat disesuaikan dengan keterampilan&nbsp;<br></h5><button class="btn btn-primary btn-sm" type="button">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card bg-secondary-light">
+                            <div class="card-body text-center px-4 py-5 px-md-5">
+                                <p class="fw-bold text-secondary card-text mb-2">Pelatihan</p>
+                                <h5 class="fw-bold card-title mb-3"><br>Dapatkan informasi mengenai pelatihan dan daftarkan diri&nbsp;<br></h5><button class="btn btn-secondary btn-sm" type="button">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4">
+                        <div class="card bg-info-light">
+                            <div class="card-body text-center px-4 py-5 px-md-5">
+                                <p class="fw-bold text-info card-text mb-2">Info Loker</p>
+                                <h5 class="fw-bold card-title mb-3">Kumpulan informasi lowongan kerja yang dapat tersedia</h5><button class="btn btn-info btn-sm" type="button">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">Testimonials</p>
+                    <h2 class="fw-bold"><strong>What People Say About us</strong></h2>
+                    <p class="text-muted">No matter the project, our team can handle it.&nbsp;</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 d-sm-flex justify-content-sm-center">
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-light border rounded border-light p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar2.jpg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-light border rounded border-light p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar4.jpg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-light border rounded border-light p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar5.jpg">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="text-muted mb-0">Erat netus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <p class="fw-bold text-success mb-2">Contacts</p>
@@ -38,7 +156,7 @@
                             <div class="mb-3"><input class="form-control" type="text" id="name-1" name="name" placeholder="Name"></div>
                             <div class="mb-3"><input class="form-control" type="email" id="email-1" name="email" placeholder="Email"></div>
                             <div class="mb-3"><textarea class="form-control" id="message-1" name="message" rows="6" placeholder="Message"></textarea></div>
-                            <div><button class="btn btn-primary shadow d-block w-100" type="submit">Send </button></div>
+                            <div><button class="btn btn-warning shadow d-block w-100" type="submit">Send </button></div>
                         </form>
                     </div>
                 </div>
@@ -50,7 +168,7 @@
                                 </svg></div>
                             <div class="px-2">
                                 <h6 class="fw-bold mb-0">Phone</h6>
-                                <p class="text-muted mb-0">+123456789</p>
+                                <p class="text-muted mb-0">+6281275634592</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center p-3">
@@ -59,7 +177,7 @@
                                 </svg></div>
                             <div class="px-2">
                                 <h6 class="fw-bold mb-0">Email</h6>
-                                <p class="text-muted mb-0">info@example.com</p>
+                                <p class="text-muted mb-0">rework@example.com</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center p-3">
@@ -73,6 +191,20 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="border rounded border-white d-flex flex-column justify-content-between align-items-center flex-lg-row bg-primary-gradient p-4 p-lg-5">
+                <div class="text-center text-lg-start py-3 py-lg-1">
+                    <h2 class="fw-bold mb-2">Subscribe to our newsletter</h2>
+                    <p class="mb-0">Imperdiet consectetur dolor.</p>
+                </div>
+                <form class="d-flex justify-content-center flex-wrap flex-lg-nowrap" method="post">
+                    <div class="my-2"><input class="border rounded-pill shadow-sm form-control" type="email" name="email" placeholder="Your Email"></div>
+                    <div class="my-2"><button class="btn btn-warning shadow ms-2" type="submit">Subscribe </button></div>
+                </form>
             </div>
         </div>
     </section>
@@ -104,7 +236,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
-                    <div class="fw-bold d-flex align-items-center mb-2"></div><img src="assets/img/LOGO.png" width="86" height="35">
+                    <div class="fw-bold d-flex align-items-center mb-2"></div><img src="../assets/img/LOGO.png" width="86" height="35">
                     <p class="text-muted">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
                 </div>
             </div>
@@ -125,8 +257,8 @@
             </div>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bold-and-bright.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bold-and-bright.js"></script>
 </body>
 
 </html>
