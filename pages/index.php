@@ -71,7 +71,8 @@
                         <div class="card bg-primary-light">
                             <div class="card-body text-center px-4 py-5 px-md-5">
                                 <p class="fw-bold text-primary card-text mb-2">Materi</p>
-                                <h5 class="fw-bold card-title mb-3"><br>Akses berbagai materi&nbsp; yang dapat disesuaikan dengan keterampilan&nbsp;<br></h5><button class="btn btn-primary btn-sm" type="button">Learn more</button>
+                                <h5 class="fw-bold card-title mb-3"><br>Akses berbagai materi&nbsp; yang dapat disesuaikan dengan keterampilan&nbsp;<br></h5>
+                                <a href="Materi.php"><button class="btn btn-primary btn-sm" type="button" >Learn more</button></a>
                             </div>
                         </div>
                     </div>
@@ -79,7 +80,8 @@
                         <div class="card bg-secondary-light">
                             <div class="card-body text-center px-4 py-5 px-md-5">
                                 <p class="fw-bold text-secondary card-text mb-2">Pelatihan</p>
-                                <h5 class="fw-bold card-title mb-3"><br>Dapatkan informasi mengenai pelatihan dan daftarkan diri&nbsp;<br></h5><button class="btn btn-secondary btn-sm" type="button">Learn more</button>
+                                <h5 class="fw-bold card-title mb-3"><br>Dapatkan informasi mengenai pelatihan dan daftarkan diri&nbsp;<br></h5>
+                                <a href="pelatihan.php"><button class="btn btn-secondary btn-sm" type="button">Learn more</button></a>
                             </div>
                         </div>
                     </div>
@@ -87,7 +89,8 @@
                         <div class="card bg-info-light">
                             <div class="card-body text-center px-4 py-5 px-md-5">
                                 <p class="fw-bold text-info card-text mb-2">Info Loker</p>
-                                <h5 class="fw-bold card-title mb-3">Kumpulan informasi lowongan kerja yang dapat tersedia</h5><button class="btn btn-info btn-sm" type="button">Learn more</button>
+                                <h5 class="fw-bold card-title mb-3">Kumpulan informasi lowongan kerja yang dapat tersedia</h5>
+                                <a href = "infoloker1.php"><button class="btn btn-info btn-sm" type="button">Learn more</button></a>
                             </div>
                         </div>
                     </div>
