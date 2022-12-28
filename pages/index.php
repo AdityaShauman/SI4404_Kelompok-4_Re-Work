@@ -107,10 +107,10 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 d-sm-flex justify-content-sm-center">
                 <div class="col mb-4">
                     <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-light border rounded border-light p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <p class="bg-light border rounded border-light p-4">Merupakan salah satu paltform pelatihan kerja yang pernah saya ikuti</p>
                         <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar2.jpg">
                             <div>
-                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="fw-bold text-primary mb-0">Sam Smith</p>
                                 <p class="text-muted mb-0">Erat netus</p>
                             </div>
                         </div>
@@ -118,10 +118,10 @@
                 </div>
                 <div class="col mb-4">
                     <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-light border rounded border-light p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <p class="bg-light border rounded border-light p-4">Merupakan pengalaman yang sangat berbeda dibanding pelatihan kerja lainnya</p>
                         <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar4.jpg">
                             <div>
-                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="fw-bold text-primary mb-0">Bruno</p>
                                 <p class="text-muted mb-0">Erat netus</p>
                             </div>
                         </div>
@@ -129,10 +129,10 @@
                 </div>
                 <div class="col mb-4">
                     <div class="d-flex flex-column align-items-center align-items-sm-start">
-                        <p class="bg-light border rounded border-light p-4">Nisi sit justo faucibus nec ornare amet, tortor torquent. Blandit class dapibus, aliquet morbi.</p>
+                        <p class="bg-light border rounded border-light p-4">Re-work Sangat melatih keterampilan, daya saing, dan produktivitas saya </p>
                         <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar5.jpg">
                             <div>
-                                <p class="fw-bold text-primary mb-0">John Smith</p>
+                                <p class="fw-bold text-primary mb-0">Kenny</p>
                                 <p class="text-muted mb-0">Erat netus</p>
                             </div>
                         </div>
