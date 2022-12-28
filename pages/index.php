@@ -114,7 +114,7 @@
                         <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar2.jpg">
                             <div>
                                 <p class="fw-bold text-primary mb-0">Sam Smith</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+                                <p class="text-muted mb-0">Pegawai Bank</p>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                         <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar4.jpg">
                             <div>
                                 <p class="fw-bold text-primary mb-0">Bruno</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+                                <p class="text-muted mb-0">Web Developer</p>
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                         <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="../assets/img/team/avatar5.jpg">
                             <div>
                                 <p class="fw-bold text-primary mb-0">Kenny</p>
-                                <p class="text-muted mb-0">Erat netus</p>
+                                <p class="text-muted mb-0">Social Media Analis</p>
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <p class="fw-bold text-success mb-2">Kontak</p>
-                    <h2 class="fw-bold">How you can reach us</h2>
+                    <h2 class="fw-bold">Anda bisa menghubungi kami</h2>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
@@ -180,46 +180,30 @@
                                 </svg></div>
                             <div class="px-2">
                                 <h6 class="fw-bold mb-0">Email</h6>
-                                <p class="text-muted mb-0">rework@example.com</p>
+                                <p class="text-muted mb-0">rework@gmail.com</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center p-3">
                             <div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pin">
                                     <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354zm1.58 1.408-.002-.001.002.001zm-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a4.922 4.922 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a4.915 4.915 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.775 1.775 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14c.06.1.133.191.214.271a1.78 1.78 0 0 0 .37.282z"></path>
                                 </svg></div>
-                            <div class="px-2">
-                                <h6 class="fw-bold mb-0">Location</h6>
-                                <p class="text-muted mb-0">12 Example Street</p>
-                            </div>
+            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-5">
-        <div class="container">
-            <div class="border rounded border-white d-flex flex-column justify-content-between align-items-center flex-lg-row bg-primary-gradient p-4 p-lg-5">
-                <div class="text-center text-lg-start py-3 py-lg-1">
-                    <h2 class="fw-bold mb-2">Subscribe to our newsletter</h2>
-                    <p class="mb-0">Imperdiet consectetur dolor.</p>
-                </div>
-                <form class="d-flex justify-content-center flex-wrap flex-lg-nowrap" method="post">
-                    <div class="my-2"><input class="border rounded-pill shadow-sm form-control" type="email" name="email" placeholder="Your Email"></div>
-                    <div class="my-2"><button class="btn btn-warning shadow ms-2" type="submit">Subscribe </button></div>
-                </form>
-            </div>
-        </div>
-    </section>
+
     <footer class="bg-primary-gradient">
         <div class="container py-4 py-lg-5">
             <div class="row justify-content-center">
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold">Services</h3>
+                    <h3 class="fs-6 fw-bold">Layanan</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Hosting</a></li>
+                        <li><a href="Materi.php">Materi</a></li>
+                        <li><a href="pelatihan.php">Pelatihan</a></li>
+                        <li><a href="infoloker2.php">Info Loker</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
@@ -230,22 +214,15 @@
                         <li><a href="#">Legacy</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold">Careers</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Job openings</a></li>
-                        <li><a href="#">Employee success</a></li>
-                        <li><a href="#">Benefits</a></li>
-                    </ul>
-                </div>
+            
                 <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
                     <div class="fw-bold d-flex align-items-center mb-2"></div><img src="../assets/img/LOGO.png" width="86" height="35">
-                    <p class="text-muted">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
+                    <p class="text-muted">Website untuk pelatihan kerja</p>
                 </div>
             </div>
             <hr>
             <div class="text-muted d-flex justify-content-between align-items-center pt-3">
-                <p class="mb-0">Copyright © 2022 Brand</p>
+                <p class="mb-0">Copyright © 2022 Re-Work</p>
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>

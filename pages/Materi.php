@@ -27,8 +27,8 @@
         <div class="container py-5">
             <div class="row mb-4 mb-lg-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2">Our Services</p>
-                    <h3 class="fw-bold">What we can do for you</h3>
+                    <p class="fw-bold text-success mb-2">Materi</p>
+                    <h3 class="fw-bold">Cari materi yang anda ingin ketahui</h3>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
@@ -64,11 +64,11 @@
         <div class="container py-4 py-lg-5">
             <div class="row justify-content-center">
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold">Services</h3>
+                    <h3 class="fs-6 fw-bold">Layanan</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Hosting</a></li>
+                        <li><a href="Materi.php">Materi</a></li>
+                        <li><a href="pelatihan.php">Pelatihan</a></li>
+                        <li><a href="infoloker2.php">Info Loker</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
@@ -79,17 +79,10 @@
                         <li><a href="#">Legacy</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold">Careers</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Job openings</a></li>
-                        <li><a href="#">Employee success</a></li>
-                        <li><a href="#">Benefits</a></li>
-                    </ul>
-                </div>
+            
                 <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
                     <div class="fw-bold d-flex align-items-center mb-2"></div><img src="../assets/img/LOGO.png" width="86" height="35">
-                    <p class="text-muted">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
+                    <p class="text-muted">Website untuk pelatihan kerja</p>
                 </div>
             </div>
             <hr>
