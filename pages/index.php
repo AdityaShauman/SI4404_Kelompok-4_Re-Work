@@ -102,8 +102,8 @@
         <div class="container py-5">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2">Testimonials</p>
-                    <h2 class="fw-bold"><strong>What People Say About us</strong></h2>
+                    <p class="fw-bold text-success mb-2">Testimoni</p>
+                    <h2 class="fw-bold"><strong>Apa yang dikatakan orang tentang kami</strong></h2>
                     <p class="text-muted">No matter the project, our team can handle it.&nbsp;</p>
                 </div>
             </div>
@@ -148,7 +148,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2">Contacts</p>
+                    <p class="fw-bold text-success mb-2">Kontak</p>
                     <h2 class="fw-bold">How you can reach us</h2>
                 </div>
             </div>
