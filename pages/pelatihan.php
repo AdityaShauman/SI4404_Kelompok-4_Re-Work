@@ -27,7 +27,7 @@
         <div class="container py-5">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="fw-bold">Heading</h2>
+                    <h2 class="fw-bold">Pelatihan</h2>
                     <p class="text-muted">Re-Work menyediakan beberapa Program pelatihan yang bisa mempersiapkan anda di dunia pekerjaan nantinya</p>
                 </div>
             </div>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
                     <div class="fw-bold d-flex align-items-center mb-2"></div><img src="../assets/img/LOGO.png" width="86" height="35">
-                    <p class="text-muted">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
+                    <p class="text-muted">Solusi Terbaik Untuk Mempersiapkan Kerja.</p>
                 </div>
             </div>
             <hr>
