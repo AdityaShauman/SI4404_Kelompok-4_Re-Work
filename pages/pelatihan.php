@@ -17,7 +17,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="Materi.php">Materi</a></li>
                     <li class="nav-item"><a class="nav-link active" href="pelatihan.php">Pelatihan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="infoloker2.php">Info Loker</a></li>
+                    <li class="nav-item"><a class="nav-link" href="infoloker1.php">Info Loker</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacts.php">Contacts</a></li>
                 </ul><a class="btn btn-warning shadow" role="button" href="signup.php">Sign up</a>
             </div>
