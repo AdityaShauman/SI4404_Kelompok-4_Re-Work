@@ -10,7 +10,7 @@
     };
     return $rows;
 }
-
+$title = "Materi";
   $materi = querydata("SELECT * FROM materi");
 ?>
 
@@ -26,19 +26,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md sticky-top navbar-shrink py-3" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="/"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1"><img src="../assets/img/LOGO.png" width="86" height="35">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="Materi.php">Materi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pelatihan.php">Pelatihan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="infoloker1.php">Info Loker</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.php">Contacts</a></li>
-                </ul><a class="btn btn-warning shadow" role="button" href="signup.php">Sign up</a>
-            </div>
-        </div>
-    </nav>
+<?php include "Navbar.php" ?>
     <section class="py-5">
         <div class="container py-5">
             <div class="row mb-4 mb-lg-5">
