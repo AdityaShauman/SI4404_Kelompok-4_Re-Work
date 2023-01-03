@@ -1,3 +1,19 @@
+<?php 
+  require('/xampp/htdocs/Re-Work/config/db_connector.php');
+
+  function querydata($query) {
+    global $connect;
+    $result = mysqli_query($connect, $query);
+    $rows = [];
+    while ( $row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    };
+    return $rows;
+}
+
+  $materi = querydata("SELECT * FROM materi");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,16 +47,19 @@
                     <h3 class="fw-bold">Cari materi yang anda ingin ketahui</h3>
                 </div>
             </div>
+
+            <?php foreach( $materi as $mater ) : ?>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                <div class="col mb-5"><img class="rounded img-fluid shadow" src="../assets/img/tubes1.jfif"></div>
+                <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" src="<?= $mater['media'] ?>"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                     <div>
-                        <h5 class="fw-bold">Cross Functional Training&nbsp;</h5>
-                        <p class="text-muted mb-4">Cross functional training adalah pelatihan yang sangat bermanfaat bagi karyawan untuk mampu memahami cara kerja organisasi secara lebih luas. Program pelatihan ini dilakukan dengan meminta karyawan untuk melakukan aktivitas pekerjaan tertentu diluar bidang pekerjaan yang menjadi tanggung jawab.</p><button class="btn btn-primary shadow" type="button">Learn more</button>
+                        <h5 class="fw-bold"><?= $mater["nama"]?></h5>
+                        <p class="text-muted mb-4"><?= substr($mater['deskripsi'], 0, 100) . ' ...' ?></p><button class="btn btn-primary shadow" type="button">Learn more</button>
                     </div>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+            <?php endforeach ?>
+            <!-- <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
                 <div class="col order-md-last mb-5"><img class="rounded img-fluid shadow" src="../assets/img/tubes2.jfif"></div>
                 <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
                     <div>
@@ -57,7 +76,7 @@
                         <p class="text-muted mb-4"> serangkaian prosedur yang dilakukan oleh QA Engineer   untuk memastikan bahwa produk yang dikembangkan sesuai dengan standar. Software Quality Assurance merupakan juga dapat didefinisikan sebagai suatu pendekatan sistematis untuk mengevaluasi kualitas suatu produk..</p><button class="btn btn-primary shadow" type="button">Learn more</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <footer class="bg-primary-gradient">

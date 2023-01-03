@@ -12,19 +12,18 @@
 
 <body id="page-top">
     <div id="wrapper">
-        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: rgba(248,25,11,0.7);">
+    <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: rgba(248,25,11,0.7);">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#"><img src="assets/img/LOGO.png" width="117" height="44" style="text-align: center;background: #ffffff;">
                     <div class="sidebar-brand-icon rotate-n-15"></div>
                     <div class="sidebar-brand-text mx-3"></div>
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="Produk.html"><i class="fab fa-product-hunt"></i><span>Produk</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="kategori.html"><i class="fas fa-dice-d6"></i><span>Kategori</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="pembelian.html"><i class="fas fa-dolly-flatbed"></i><span>Pembelian</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="pelanggan.html"><i class="fas fa-user"></i><span>Pelanggan</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="profile.html"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.php"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="materi.php"><i class="fab fa-product-hunt"></i><span>Kelola Materi</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="pelatihan.php"><i class="fas fa-dice-d6"></i><span>Kelola Pelatihan</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="loker.php"><i class="fas fa-dolly-flatbed"></i><span>Kelola Loker</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.php"><i class="fas fa-user"></i><span>Profile</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>
