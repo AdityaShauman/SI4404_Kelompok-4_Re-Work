@@ -1,11 +1,6 @@
 <?php
-session_start();
-
-if(!isset($_SESSION["login"])){
-  header("location: user_home.php");
-  exit;
-}
 require "/xampp/htdocs/Re-Work/config/db_connector.php";
+$title = "Home";
 
 ?>
 
@@ -15,7 +10,7 @@ require "/xampp/htdocs/Re-Work/config/db_connector.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Home</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
 </head>
@@ -46,9 +41,6 @@ require "/xampp/htdocs/Re-Work/config/db_connector.php";
                     <li class="nav-item"><a class="nav-link" href="infoloker1.php">Info Loker</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacts.php">Contacts</a></li>
                 </ul><a class="btn btn-warning shadow" role="button" href="register.php">Sign up</a>
-            </div>
-            <div class="dropdown"><button class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown" style="background: var(--bs-yellow);color: var(--bs-navbar-active-color);">Dropdown Baby</button>
-                <div class="dropdown-menu"><input type="text" class="form-control dropdown-search-input" placeholder="Search.."><a class="dropdown-item" href="#">Angular</a><a class="dropdown-item" href="#">Java</a><a class="dropdown-item" href="#">JavaScript</a></div>
             </div>
         </div>
     </nav>
