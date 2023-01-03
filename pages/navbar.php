@@ -30,12 +30,12 @@ require "/xampp/htdocs/Re-Work/config/db_connector.php";
                     <li class="nav-item"><a class="nav-link <?php if ($title == "Contacts") echo "active" ?>" href="contacts.php">Contacts</a></li>
                 </ul>
                     <div class="dropdown ms-4">
-                    <button class="btn btn-light dropdown-toggle text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-light dropdown-toggle text-" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?= $_SESSION["nama"]; ?>
                     </button>
                     <ul class="dropdown-menu">
-                    <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="#">Profile</a></li>
-                    <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="/Re-Work/config/logout.php">Log Out</a></li>
+                    <li><a class="dropdown-item text-" href="user_profile.php">Profile</a></li>
+                    <li><a class="dropdown-item text-" href="/Re-Work/config/logout.php">Log Out</a></li>
                     </ul>
                 </div>
             </div>
