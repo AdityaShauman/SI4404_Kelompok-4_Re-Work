@@ -25,4 +25,17 @@
     return mysqli_affected_rows($connect);
 }
 
+function tambahpelatihan($inputdata){
+  global $connect;
+  $pelatihan = $inputdata['pelatihan'];
+  $deskripsi = $inputdata['deskripsi'];
+  $media = $inputdata['media'];
+  $harga = $inputdata['harga'];
+  $status = "Not Confirmed";
+  
+  $query = "INSERT INTO pelatihan VALUES('', '$pelatihan','$deskripsi','$media','$harga','$status')";
+  mysqli_query($connect,$query);
+  return mysqli_affected_rows($connect);
+}
+
 ?>

@@ -173,23 +173,26 @@ if ( isset($_POST["submitselesai"]) ) {
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>ID Loker</th>
+                                            <th>Nama</th>
+                                            <th>Deskripsi</th>
+                                            <th>Foto</th>
+                                            <th>Link Loker</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php foreach( $loker as $loke ) : ?>
                                         <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Airi Satou</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-                                            <td>2008/11/28</td>
-                                            <td>$162,700</td>
+                                            <td><?= $loke["idloker"]?></td>
+                                            <td><?= $loke["nama"]?></td>
+                                            <td><?= $loke["deskripsi"]?></td>
+                                            <td><?= $loke["foto"]?></td>
+                                            <td><?= $loke["link"]?></td>
+                                            <td><a href="#" class="btn btn-success mx-4">Edit</a>
+                                            <a href="/Re-Work/config/delete.php?id=<?= $loke['idloker'] ?>" class="btn btn-danger mx-4">Delete</a></td>
                                         </tr>
+                                        <?php endforeach ?>
                                     </tbody>
                                 </table>
                             </div>

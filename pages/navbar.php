@@ -47,9 +47,6 @@ require "/xampp/htdocs/Re-Work/config/db_connector.php";
             <div class="collapse navbar-collapse" id="navcol-1"><img src="../assets/img/LOGO.png" width="86" height="35">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link <?php if ($title == "Home") echo "active" ?>" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link <?php if ($title == "Materi") echo "active" ?>" href="Materi.php">Materi</a></li>
-                    <li class="nav-item"><a class="nav-link <?php if ($title == "Pelatihan") echo "active" ?>" href="pelatihan.php">Pelatihan</a></li>
-                    <li class="nav-item"><a class="nav-link <?php if ($title == "Loker") echo "active" ?>" href="infoloker1.php">Info Loker</a></li>
                     <li class="nav-item"><a class="nav-link <?php if ($title == "Contacts") echo "active" ?>" href="contacts.php">Contacts</a></li>
                 </ul><a class="btn btn-warning shadow" role="button" href="register.php">Sign up</a>
             </div>
