@@ -10,7 +10,7 @@ $title = "Home";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Home</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
 </head>
@@ -22,9 +22,9 @@ $title = "Home";
         <div class="container pt-4 pt-xl-5">
             <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
                 <div class="carousel-inner">
-                    <div class="carousel-item active"><img class="w-100 d-block" src="../assets/img/C3.jpg" alt="Slide Image"></div>
-                    <div class="carousel-item"><img class="w-100 d-block" src="../assets/img/C1.jpg" alt="Slide Image"></div>
-                    <div class="carousel-item"><img class="w-100 d-block" src="../assets/img/C2.jpg" alt="Slide Image"></div>
+                    <div class="carousel-item active"><img class="w-100 d-block" src="http://ppkdjakpus.com/wp-content/uploads/2019/12/WhatsApp-Image-2019-12-02-at-07.56.51.jpeg" alt="Slide Image"></div>
+                    <div class="carousel-item"><img class="w-100 d-block" src="https://runsystem.id/wp-content/uploads/2022/02/female-speaker-giving-presentation-hall-university-workshop-audience-conference-hall-1600x1067.jpg" alt="Slide Image"></div>
+                    <div class="carousel-item"><img class="w-100 d-block" src="https://www.toughmudder.id/wp-content/uploads/2022/11/program-pelatihan-kerja-bersertifikat-1.jpg" alt="Slide Image"></div>
                 </div>
                 <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
                 <ol class="carousel-indicators">

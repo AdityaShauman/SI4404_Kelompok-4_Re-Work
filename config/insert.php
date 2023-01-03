@@ -13,12 +13,16 @@
       return mysqli_affected_rows($connect);
   }
 
-//   function upfoto(){
-//     $fotofile = $_FILES['gambarmateri']['name'];
-//     $fototmpname = $_FILES['gambarmateri']['tmp_name'];
-
-//     move_uploaded_file("$fototmpname", "/xampp/htdocs/Re-Work/page_admin/assets/img/materi/" . $fotofile);
-//     return $fotofile;
-// }
+  function tambahloker($inputdata){
+    global $connect;
+    $loker = $inputdata['loker'];
+    $deskripsi = $inputdata['deskripsi'];
+    $fotoloker = $inputdata['fotoloker'];
+    $linkloker = $inputdata['linkloker'];
+    
+    $query = "INSERT INTO loker VALUES('', '$loker','$deskripsi','$fotoloker','$linkloker')";
+    mysqli_query($connect,$query);
+    return mysqli_affected_rows($connect);
+}
 
 ?>
