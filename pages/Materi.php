@@ -11,7 +11,7 @@
     return $rows;
 }
 $title = "Materi";
-  $materi = querydata("SELECT * FROM materi");
+$materi = querydata("SELECT * FROM materi");
 ?>
 
 <!DOCTYPE html>

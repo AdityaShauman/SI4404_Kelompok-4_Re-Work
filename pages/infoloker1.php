@@ -2,6 +2,17 @@
 require "/xampp/htdocs/Re-Work/config/db_connector.php";
 $title = "Loker";
 
+function querydata($query) {
+    global $connect;
+    $result = mysqli_query($connect, $query);
+    $rows = [];
+    while ( $row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    };
+    return $rows;
+}
+
+$loker = querydata("SELECT * FROM loker");
 ?>
 
 <!DOCTYPE html>
@@ -21,43 +32,24 @@ $title = "Loker";
         <div class="container py-5">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="fw-bold">Heading</h2>
-                    <p class="text-muted">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
+                    <h2 class="fw-bold">Info Lowongan Kerja</h2>
+                    <p class="text-muted">Temukan lowongan kerja yang sesuai melalui Re-Work!</p>
                 </div>
             </div>
             <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+
+                <?php foreach( $loker as $loke ) : ?>
                 <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="../assets/img/products/1.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Website</span>
-                            <h4 class="fw-bold">Lorem libero donec</h4>
-                            <p class="text-muted">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary btn-sm" type="button">Learn more</button>
+                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="<?= $loke['foto'] ?>" style="height: 250px;"></a>
+                        <!-- <div class="py-4"><span class="badge bg-primary mb-2">Website</span> -->
+                        
+                            <h4 class="fw-bold"><br><?= $loke["nama"]?></h4>
+                            <p class="text-muted"><?= substr($loke['deskripsi'], 0, 100) . ' ...' ?><a href="<?= $loke['link'] ?>"></p><button class="btn btn-primary btn-sm" type="button">Link Loker</button></a>
                         </div>
                     </div>
                 </div>
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="../assets/img/products/2.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Website</span>
-                            <h4 class="fw-bold">Lorem libero donec</h4>
-                            <p class="text-muted">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary btn-sm" type="button">Learn more</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="../assets/img/products/3.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Website</span>
-                            <h4 class="fw-bold">Lorem libero donec</h4>
-                            <p class="text-muted">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary btn-sm" type="button">Learn more</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="../assets/img/products/1.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Website</span>
-                            <h4 class="fw-bold">Lorem libero donec</h4>
-                            <p class="text-muted">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p><button class="btn btn-primary btn-sm" type="button">Learn more</button>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach ?>
+
             </div>
         </div>
     </section>
