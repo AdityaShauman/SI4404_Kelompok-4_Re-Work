@@ -47,6 +47,9 @@ require "/xampp/htdocs/Re-Work/config/db_connector.php";
                     <li class="nav-item"><a class="nav-link" href="contacts.php">Contacts</a></li>
                 </ul><a class="btn btn-warning shadow" role="button" href="register.php">Sign up</a>
             </div>
+            <div class="dropdown"><button class="btn btn-secondary dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" data-bs-toggle="dropdown" style="background: var(--bs-yellow);color: var(--bs-navbar-active-color);">Dropdown Baby</button>
+                <div class="dropdown-menu"><input type="text" class="form-control dropdown-search-input" placeholder="Search.."><a class="dropdown-item" href="#">Angular</a><a class="dropdown-item" href="#">Java</a><a class="dropdown-item" href="#">JavaScript</a></div>
+            </div>
         </div>
     </nav>
     <?php };?>
