@@ -57,7 +57,8 @@
 
                         
                         <button type="submit" name="registeruser" class="btn btn-primary btn-lg">Register</button>
-
+                        
+                        <p><br>Sudah Punya Akun? <a href="./login.php">Login Disini!</a></p>
                         </form>
 
                     </div>

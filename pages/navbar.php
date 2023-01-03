@@ -1,10 +1,7 @@
 <?php
 session_start();
 
-if(!isset($_SESSION["login"])){
-  header("location: user_home.php");
-  exit;
-}
+
 require "/xampp/htdocs/Re-Work/config/db_connector.php";
 
 ?>
@@ -37,8 +34,8 @@ require "/xampp/htdocs/Re-Work/config/db_connector.php";
                     <?= $_SESSION["nama"]; ?>
                     </button>
                     <ul class="dropdown-menu">
-                    <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="./pages/Profile-Rakan.php">Profile</a></li>
-                    <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="./config/logout.php">Log Out</a></li>
+                    <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="#">Profile</a></li>
+                    <li><a class="dropdown-item text-<?= isset($_COOKIE["warna_navbar"])  ? $_COOKIE["warna_navbar"] : "success"; ?>" href="/Re-Work/config/logout.php">Log Out</a></li>
                     </ul>
                 </div>
             </div>
