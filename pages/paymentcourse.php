@@ -28,7 +28,7 @@
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <h2 class="fw-bold">Heading</h2>
-                    <p class="text-muted">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
+                    <p class="text-muted">Kami menyediakan layanan pelatihan yang tersedia secara gratis dan program latihan yang bayar</p>
                 </div>
             </div>
             <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3 d-flex align-items-md-center align-items-xl-center">
@@ -37,9 +37,9 @@
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <h3 class="fw-bold mb-0">Basic Bundle</h3>
+                                    <h3 class="fw-bold mb-0">Free Bundle</h3>
                                     <p>Suscipit</p>
-                                    <h4 class="display-4 fw-bold">$25</h4>
+                                    <h4 class="display-4 fw-bold">Tidak dikenakan biaya</h4>
                                 </div>
                             </div>
                             <div>
@@ -63,9 +63,9 @@
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <h3 class="fw-bold text-white mb-0">Pro Bundle</h3>
+                                    <h3 class="fw-bold text-white mb-0">Master Bundle</h3>
                                     <p>Suscipit + donec</p>
-                                    <h4 class="display-4 fw-bold text-white">$38</h4>
+                                    <h4 class="display-4 fw-bold text-white">Rp. 300.000/Bulan</h4>
                                 </div>
                                 <div><span class="badge rounded-pill bg-primary text-uppercase bg-semi-white">Best Value</span></div>
                             </div>
