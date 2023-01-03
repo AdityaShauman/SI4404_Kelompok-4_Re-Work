@@ -36,15 +36,16 @@ $loker = querydata("SELECT * FROM loker");
                     <p class="text-muted">Temukan lowongan kerja yang sesuai melalui Re-Work!</p>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+            <?php foreach( $loker as $loke ) : ?>
+            <div class="row row-cols-1 row-cols-md-1 mx-auto" style="max-width: 900px;align: center">
 
-                <?php foreach( $loker as $loke ) : ?>
-                <div class="col mb-4">
+                
+                <div class="col mb-4" style="text-align:center">
                     <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="<?= $loke['foto'] ?>" style="height: 250px;"></a>
                         <!-- <div class="py-4"><span class="badge bg-primary mb-2">Website</span> -->
                         
                             <h4 class="fw-bold"><br><?= $loke["nama"]?></h4>
-                            <p class="text-muted"><?= substr($loke['deskripsi'], 0, 100) . ' ...' ?><a href="<?= $loke['link'] ?>"></p><button class="btn btn-primary btn-sm" type="button">Link Loker</button></a>
+                            <p class="text-muted"><?= substr($loke['deskripsi'], 0, 200) . ' ...' ?><a href="<?= $loke['link'] ?>"></p><button class="btn btn-primary btn-sm" type="button">Link Loker</button></a>
                         </div>
                     </div>
                 </div>
