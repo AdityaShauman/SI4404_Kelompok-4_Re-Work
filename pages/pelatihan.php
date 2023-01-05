@@ -1,7 +1,17 @@
-<?php
-require "/xampp/htdocs/Re-Work/config/db_connector.php";
-$title = "Pelatihan";
+<?php 
+  require('/xampp/htdocs/Re-Work/config/db_connector.php');
 
+  function querydata($query) {
+    global $connect;
+    $result = mysqli_query($connect, $query);
+    $rows = [];
+    while ( $row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    };
+    return $rows;
+}
+$title = "Pelatihan";
+$pelatihan = querydata("SELECT * FROM pelatihan");
 ?>
 
 <!DOCTYPE html>
@@ -21,43 +31,83 @@ $title = "Pelatihan";
         <div class="container py-5">
             <div class="row mb-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="fw-bold">Pelatihan</h2>
-                    <p class="text-muted">Re-Work menyediakan beberapa Program pelatihan yang bisa mempersiapkan anda di dunia pekerjaan nantinya</p>
+                    <h2 class="fw-bold">Info Pelatihan</h2>
+                    <p class="text-muted">Kami menyediakan layanan pelatihan yang tersedia secara gratis dan program latihan yang bayar</p>
                 </div>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="../assets/img/products/Youth-Academy.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Website</span>
-                            <h4 class="fw-bold">Youth Academy</h4>
-                            <p class="text-muted">Program yang bertujuan untuk mempersiapkan para lulusan yang belum mendapatkan pekerjaan untuk bisa bersaing secara profesional</p><button class="btn btn-primary btn-sm" type="button">Learn more</button>
+            <?php foreach( $pelatihan as $pelatiha ) : ?>
+            <?php if( $pelatiha["harga"] == 0 ) : ?>
+            <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3 d-flex align-items-md-center align-items-xl-center">
+                <div class="col offset-xl-2 mb-4">
+                    <div class="card bg-light border-light">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="fw-bold mb-0"><?= $pelatiha["nama"]?></h3>
+                                    <br>
+                                    <img class="rounded img-fluid shadow" src="<?= $pelatiha['media'] ?>">
+                                    <h4 class="display-8 fw-bold"><br>Tidak dikenakan biaya</h4>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text mb-4"><?=$pelatiha['deskripsi']?></p>
+                                <!-- <ul class="list-unstyled">
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Lectus ut nibh quam, felis porttitor.</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Ante nec venenatis etiam lacinia.</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-primary-light bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Porta suscipit netus ad ac.</span></li>
+                                </ul> -->
+                            </div><button class="btn btn-primary d-block w-100" type="button">Button</button>
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
+                <?php endforeach ?>
+
+                <?php foreach( $pelatihan as $pelatiha ) : ?>
+                <?php if( $pelatiha["harga"] != 0 ) : ?>
                 <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="../assets/img/products/Ace-Academy.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Website</span>
-                            <h4 class="fw-bold">Ace Academy</h4>
-                            <p class="text-muted">Program latihan yang bertujuan untuk para profesional yang sudah memiliki pengalaman berkerja untuk meningkatkan upscaling dan rescaling</p><button class="btn btn-primary btn-sm" type="button">Learn more</button>
+                    <div class="card text-white bg-primary">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="fw-bold text-white mb-0"><?= $pelatiha["nama"]?></h3>
+                                    <br>
+                                    <img class="rounded img-fluid shadow" src="<?= $pelatiha['media'] ?>">
+                                    <h4 class="display-8 fw-bold text-white"><br>Rp. <?= $pelatiha["harga"]?>/Bulan</h4>
+                                </div>
+                                <div><span class="badge rounded-pill bg-primary text-uppercase bg-semi-white">Best Value</span></div>
+                            </div>
+                            <div>
+                            <p class="text mb-4"><?=$pelatiha['deskripsi']?></p>
+                                <!-- <ul class="list-unstyled">
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Lectus ut nibh quam, felis porttitor.</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Ante nec venenatis etiam lacinia.</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Porta suscipit netus ad ac.</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Morbi praesent aptent integer at.</span></li>
+                                    <li class="d-flex mb-2"><span class="bs-icon-xs bs-icon-rounded bs-icon-semi-white bs-icon bs-icon-xs me-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-check-lg text-primary">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"></path>
+                                            </svg></span><span>Nisl potenti ut auctor lobortis.</span></li>
+                                </ul> -->
+                            </div><button class="btn btn-primary d-block w-100 bg-semi-white" type="button">Button</button>
                         </div>
                     </div>
                 </div>
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="../assets/img/products/Leadership-Academy.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Website</span>
-                            <h4 class="fw-bold">Leadership Academy</h4>
-                            <p class="text-muted">Program latihan yang bertujuan untuk membentuk seseorang agar bisa menjadi pemimpin yang ideal</p><button class="btn btn-primary btn-sm" type="button">Learn more</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="../assets/img/products/Talent-Academy.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Website</span>
-                            <h4 class="fw-bold">Talent Academy</h4>
-                            <p class="text-muted">Program latihan yang bertujuan untuk meningkatkan komptensi bagi mahasiswa ahkir yang memilik bakat di akademi</p><button class="btn btn-primary btn-sm" type="button">Learn more</button>
-                        </div>
-                    </div>
-                </div>
+                <?php endif; ?>
+                <?php endforeach ?>
             </div>
         </div>
     </section>
@@ -65,11 +115,11 @@ $title = "Pelatihan";
         <div class="container py-4 py-lg-5">
             <div class="row justify-content-center">
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold">Services</h3>
+                    <h3 class="fs-6 fw-bold">Layanan</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Hosting</a></li>
+                        <li><a href="Materi.php">Materi</a></li>
+                        <li><a href="pelatihan.php">Pelatihan</a></li>
+                        <li><a href="infoloker1.php">Info Loker</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
@@ -80,17 +130,10 @@ $title = "Pelatihan";
                         <li><a href="#">Legacy</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
-                    <h3 class="fs-6 fw-bold">Careers</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Job openings</a></li>
-                        <li><a href="#">Employee success</a></li>
-                        <li><a href="#">Benefits</a></li>
-                    </ul>
-                </div>
+            
                 <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
                     <div class="fw-bold d-flex align-items-center mb-2"></div><img src="../assets/img/LOGO.png" width="86" height="35">
-                    <p class="text-muted">Solusi Terbaik Untuk Mempersiapkan Kerja.</p>
+                    <p class="text-muted">Website untuk pelatihan kerja</p>
                 </div>
             </div>
             <hr>

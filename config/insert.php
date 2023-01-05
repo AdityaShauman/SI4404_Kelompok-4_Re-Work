@@ -31,9 +31,8 @@ function tambahpelatihan($inputdata){
   $deskripsi = $inputdata['deskripsi'];
   $media = $inputdata['media'];
   $harga = $inputdata['harga'];
-  $status = "Not Confirmed";
   
-  $query = "INSERT INTO pelatihan VALUES('', '$pelatihan','$deskripsi','$media','$harga','$status')";
+  $query = "INSERT INTO pelatihan VALUES('', '$pelatihan','$deskripsi','$media','$harga')";
   mysqli_query($connect,$query);
   return mysqli_affected_rows($connect);
 }

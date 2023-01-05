@@ -1,6 +1,41 @@
 <?php
+
 require "/xampp/htdocs/Re-Work/config/db_connector.php";
-$title = "TambahPelatihan";
+
+require "/xampp/htdocs/Re-Work/config/insert.php";
+if ( isset($_POST["submitselesai"]) ) {
+    if ( tambahpelatihan($_POST) > 0 ) {
+        echo "
+            <script>
+                alert('Data added');
+                document.location.href = './pelatihan.php';
+            </script>
+        ";
+    } else {
+        echo "
+            <script>
+                alert('Data not added');
+                document.location.href = './pelatihan.php';
+            </script>
+        ";
+    }
+};
+
+
+
+  function querydata($query) {
+    global $connect;
+    $result = mysqli_query($connect, $query);
+    $rows = [];
+    while ( $row = mysqli_fetch_assoc($result)) {
+        $rows[] = $row;
+    };
+    return $rows;
+}
+
+  $pelatihan = querydata("SELECT * FROM pelatihan");
+  $title = "TambahPelatihan";
+
 
 ?>
 
@@ -116,10 +151,10 @@ $title = "TambahPelatihan";
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Team</h3>
+                    <h3 class="text-dark mb-4">Pelatihan</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Employee Info</p>
+                        <p class="text-primary m-0 fw-bold"><a data-bs-toggle="modal" data-bs-target="#examplemodal">Tambah Pelatihan</a></p>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -156,89 +191,7 @@ $title = "TambahPelatihan";
                                             <td>2008/11/28</td>
                                             <td>$162,700</td>
                                         </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar2.jpeg">Angelica Ramos</td>
-                                            <td>Chief Executive Officer(CEO)</td>
-                                            <td>London</td>
-                                            <td>47</td>
-                                            <td>2009/10/09<br></td>
-                                            <td>$1,200,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar3.jpeg">Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12<br></td>
-                                            <td>$86,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar4.jpeg">Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td>41</td>
-                                            <td>2012/10/13<br></td>
-                                            <td>$132,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar5.jpeg">Brenden Wagner</td>
-                                            <td>Software Engineer</td>
-                                            <td>San Francisco</td>
-                                            <td>28</td>
-                                            <td>2011/06/07<br></td>
-                                            <td>$206,850</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar1.jpeg">Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>New York</td>
-                                            <td>61</td>
-                                            <td>2012/12/02<br></td>
-                                            <td>$372,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar2.jpeg">Bruno Nash<br></td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td>38</td>
-                                            <td>2011/05/03<br></td>
-                                            <td>$163,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar3.jpeg">Caesar Vance</td>
-                                            <td>Pre-Sales Support</td>
-                                            <td>New York</td>
-                                            <td>21</td>
-                                            <td>2011/12/12<br></td>
-                                            <td>$106,450</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar4.jpeg">Cara Stevens</td>
-                                            <td>Sales Assistant</td>
-                                            <td>New York</td>
-                                            <td>46</td>
-                                            <td>2011/12/06<br></td>
-                                            <td>$145,600</td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar5.jpeg">Cedric Kelly</td>
-                                            <td>Senior JavaScript Developer</td>
-                                            <td>Edinburgh</td>
-                                            <td>22</td>
-                                            <td>2012/03/29<br></td>
-                                            <td>$433,060</td>
-                                        </tr>
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td><strong>Name</strong></td>
-                                            <td><strong>Position</strong></td>
-                                            <td><strong>Office</strong></td>
-                                            <td><strong>Age</strong></td>
-                                            <td><strong>Start date</strong></td>
-                                            <td><strong>Salary</strong></td>
-                                        </tr>
-                                    </tfoot>
                                 </table>
                             </div>
                             <div class="row">
@@ -250,8 +203,6 @@ $title = "TambahPelatihan";
                                         <ul class="pagination">
                                             <li class="page-item disabled"><a class="page-link" aria-label="Previous" href="#"><span aria-hidden="true">«</span></a></li>
                                             <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
                                             <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>
                                         </ul>
                                     </nav>
@@ -271,6 +222,49 @@ $title = "TambahPelatihan";
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
+
+            <!-- Form -->
+            <div class="modal fade" id="examplemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Pelatihan</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form method ="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nama Pelatihan</label>
+            <input type="text" class="form-control" id="pelatihan" name="pelatihan" placeholder="Isi Nama Materi">
+        </div>
+                    
+        <br>
+        <div class="form-group">
+            <label class="control-label" for="deskripsi">Deskripsi</label>
+            <textarea class="form-control" id="deskripsi" name = "deskripsi" rows="3" placeholder="Isi Deskripsi"></textarea>
+        </div>
+        
+        <br>
+        <div class="mb-3">
+            <label for="name" class="form-label">Link Gambar</label>
+            <input type="text" class="form-control" id="media" name="media" placeholder="Isi Link Media">
+        </div>
+
+        <div class="mb-3">
+            <label for="harga" class="form-label">Harga Pelatihan</label>
+            <input type="number" step ="any" class="form-control" id="harga" name="harga" placeholder="Isi Harga">
+        </div>
+    
+        <div class="mb-3">
+            <div>
+                <br><button class="btn btn-primary" type="submit" name="submitselesai">Selesai</button>
+            </div>
+        </div>
+    </form>
+                </div>
+              </div>
+            </div>
+          </div>
 </body>
 
 </html>
