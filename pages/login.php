@@ -50,7 +50,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Contacts - Brand</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
 </head>
@@ -85,16 +85,20 @@
                             </div>
                         </div>
 
-                        <div class="form-check d-flex justify-content-center mb-5">
+                        <!-- <div class="form-check d-flex justify-content-center mb-5">
                             <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                             <label class="form-check-label" for="form2Example3">
                             Remember Me<a href="#!"></a>
                             </label>
-                        </div>
+                        </div> -->
+                        <p align="center"><br>Belum punya akun? <a href="register.php">Login Disini!</a></p>
+
 
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                             <button type="submit" name="login_user" class="btn btn-primary btn-lg">Login</button>
                         </div>
+
+                        <p align="center"><a href="../page_admin/login.php" style="text-decoration: none; color: gray; opacity: 50%;">Admin Login</a></p>
 
                         </form>
 

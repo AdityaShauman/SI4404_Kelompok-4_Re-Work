@@ -1,3 +1,49 @@
+<?php
+        if(!isset($_SESSION)){
+            session_start();
+        }
+        
+        require "/xampp/htdocs/Re-Work/config/register.php";
+        require "/xampp/htdocs/Re-Work/config/db_connector.php";
+
+        if(isset($_POST["registeradmin"])){
+            if(registrasi_admin($_POST)){
+                echo "<script> S
+                alert('Berhasil Registrasi!');  
+            </script>";
+            }else{
+                echo mysqli_error($connect);
+            }
+        }
+
+
+        if (isset($_SESSION["loginadmin"])){
+            header("Location: /Re-Work/page_admin/index.php");
+            exit;
+        }
+
+        if(isset($_POST["loginadmin"])) {
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+
+            $result = mysqli_query($connect, "SELECT * FROM useradmin WHERE email = '$email'");
+
+            if(mysqli_num_rows($result) === 1){
+                $row = mysqli_fetch_assoc($result);
+                if (password_verify($password, $row["password"])) {
+                    $_SESSION["email"] = $row["email"];
+                    $_SESSION["nama"] = $row["nama"];
+                    $_SESSION["login"] = true; 
+
+                    $_SESSION["message"] = "Berhasil Login";
+                    header("Location: /Re-Work/page_admin/index.php");
+                    exit;
+                };
+            }
+            $error = true ;
+        }
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,12 +67,12 @@
 
                         <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Login</p>
 
-                        <form class="mx-1 mx-md-4">
+                        <form class="mx-1 mx-md-4" method="post">
 
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                            <input type="text" id="form3Example1c" class="form-control" />
+                            <input type="text" id="form3Example1c" name = "email" class="form-control" />
                             <label class="form-label" for="form3Example1c">Email</label>
                             </div>
                         </div>
@@ -34,31 +80,26 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4c" class="form-control" />
+                            <input type="password" id="form3Example4c" name ="password" class="form-control" />
                             <label class="form-label" for="form3Example4c">Password</label>
                             </div>
                         </div>
 
-                        <div class="form-check d-flex justify-content-center mb-5">
+                        <!-- <div class="form-check d-flex justify-content-center mb-5">
                             <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                             <label class="form-check-label" for="form2Example3">
                             Remember Me<a href="#!"></a>
                             </label>
-                        </div>
+                        </div> -->
 
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <button type="button" class="btn btn-primary btn-lg">Login</button>
+                        <button type="submit" name="loginadmin" class="btn btn-primary btn-lg">Login</button>
                         </div>
 
                         </form>
 
                     </div>
-                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"  style= "height: 700px; border-radius: 10px; width: 100%" 
-                        class="img-fluid" alt="Sample image">
-
-                    </div>
                     
                 </div>
                 
