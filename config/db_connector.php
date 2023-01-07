@@ -1,6 +1,6 @@
 <?php
 
-$connect = mysqli_connect("localhost".":"."3306", "root", "", "re-work");
+$connect = mysqli_connect("localhost".":"."3308", "root", "", "re-work");
 
 
 ?>
