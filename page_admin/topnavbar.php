@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require "/xampp/htdocs/Re-Work/config/db_connector.php";
+require "../config/db_connector.php";
 
 ?>
 

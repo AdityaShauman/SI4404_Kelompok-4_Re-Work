@@ -1,8 +1,8 @@
 <?php
 
-require "/xampp/htdocs/Re-Work/config/db_connector.php";
+require "../config/db_connector.php";
 
-require "/xampp/htdocs/Re-Work/config/insert.php";
+require "../config/insert.php";
 if ( isset($_POST["submitselesai"]) ) {
     if ( adding($_POST) > 0 ) {
         echo "

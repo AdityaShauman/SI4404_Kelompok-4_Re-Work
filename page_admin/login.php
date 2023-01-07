@@ -3,8 +3,8 @@
             session_start();
         }
         
-        require "/xampp/htdocs/Re-Work/config/register.php";
-        require "/xampp/htdocs/Re-Work/config/db_connector.php";
+        require "../config/register.php";
+        require "../config/db_connector.php";
 
         if(isset($_POST["registeradmin"])){
             if(registrasi_admin($_POST)){

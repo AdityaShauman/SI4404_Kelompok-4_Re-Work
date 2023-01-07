@@ -1,5 +1,5 @@
 <?php 
-  require "/xampp/htdocs/Re-Work/config/edit.php";
+  require "../config/edit.php";
 
   function querydata($query) {
     global $connect;

@@ -1,8 +1,8 @@
 <?php
-require "/xampp/htdocs/Re-Work/config/db_connector.php";
+require "../config/db_connector.php";
 $title = "TambahLoker";
 
-require "/xampp/htdocs/Re-Work/config/insert.php";
+require "../config/insert.php";
 if ( isset($_POST["submitselesai"]) ) {
     if ( tambahloker($_POST) > 0 ) {
         echo "
