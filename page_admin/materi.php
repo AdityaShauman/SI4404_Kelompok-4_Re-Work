@@ -98,7 +98,7 @@ if ( isset($_POST["submitselesai"]) ) {
                                             <td><?= $mater["deskripsi"]?></td>
                                             <td><?= $mater["media"]?></td>
                                             <td><a href="./editmateri.php?id=<?= $mater['idmateri'] ?>" class="btn btn-success mx-4">Edit</a>
-                                            <a href="/Re-Work/config/delete.php?id=<?= $mater['idmateri'] ?>" class="btn btn-danger mx-4">Delete</a></td>
+                                            <a href="../config/delete.php?id=<?= $mater['idmateri'] ?>" class="btn btn-danger mx-4">Delete</a></td>
                                             <!-- <td>2008/11/28</td>
                                             <td>$162,700</td> -->
                                         </tr>

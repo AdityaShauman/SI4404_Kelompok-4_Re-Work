@@ -18,7 +18,7 @@
 
 
         if (isset($_SESSION["loginadmin"])){
-            header("Location: /Re-Work/page_admin/index.php");
+            header("Location: ../page_admin/index.php");
             exit;
         }
 
@@ -36,7 +36,7 @@
                     $_SESSION["login"] = true; 
 
                     $_SESSION["message"] = "Berhasil Login";
-                    header("Location: /Re-Work/page_admin/index.php");
+                    header("Location: ../page_admin/index.php");
                     exit;
                 };
             }

@@ -97,7 +97,7 @@ if ( isset($_POST["submitselesai"]) ) {
                                             <td><?= $loke["foto"]?></td>
                                             <td><?= $loke["link"]?></td>
                                             <td><a href="#" class="btn btn-success mx-4">Edit</a>
-                                            <a href="/Re-Work/config/delete.php?id=<?= $loke['idloker'] ?>" class="btn btn-danger mx-4">Delete</a></td>
+                                            <a href="../config/delete.php?id=<?= $loke['idloker'] ?>" class="btn btn-danger mx-4">Delete</a></td>
                                         </tr>
                                         <?php endforeach ?>
                                     </tbody>

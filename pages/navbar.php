@@ -35,7 +35,7 @@ require "../config/db_connector.php";
                     </button>
                     <ul class="dropdown-menu">
                     <li><a class="dropdown-item text-" href="user_profile.php">Profile</a></li>
-                    <li><a class="dropdown-item text-" href="/Re-Work/config/logout.php">Log Out</a></li>
+                    <li><a class="dropdown-item text-" href="../config/logout.php">Log Out</a></li>
                     </ul>
                 </div>
             </div>
