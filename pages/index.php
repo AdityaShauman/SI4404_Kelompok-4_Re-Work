@@ -21,7 +21,7 @@ $title = "Home";
     <header class="bg-primary-gradient">
         <div class="container pt-4 pt-xl-5">
             <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
-                <div class="carousel-inner">
+                <div class="carousel-inner" style ="border-radius: 10px">
                     <div class="carousel-item active"><img class="w-100 d-block" src="http://ppkdjakpus.com/wp-content/uploads/2019/12/WhatsApp-Image-2019-12-02-at-07.56.51.jpeg" alt="Slide Image"></div>
                     <div class="carousel-item"><img class="w-100 d-block" src="https://runsystem.id/wp-content/uploads/2022/02/female-speaker-giving-presentation-hall-university-workshop-audience-conference-hall-1600x1067.jpg" alt="Slide Image"></div>
                     <div class="carousel-item"><img class="w-100 d-block" src="https://www.toughmudder.id/wp-content/uploads/2022/11/program-pelatihan-kerja-bersertifikat-1.jpg" alt="Slide Image"></div>

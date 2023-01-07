@@ -37,7 +37,7 @@ $pelatihan = querydata("SELECT * FROM pelatihan");
             </div>
             <?php foreach( $pelatihan as $pelatiha ) : ?>
             <?php if( $pelatiha["harga"] == 0 ) : ?>
-            <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3 d-flex align-items-md-center align-items-xl-center">
+            <div class="row g-0 row-cols-1 row-cols-md-2 row-cols-xl-3  ">
                 <div class="col offset-xl-2 mb-4">
                     <div class="card bg-light border-light">
                         <div class="card-body p-4">
@@ -49,6 +49,7 @@ $pelatihan = querydata("SELECT * FROM pelatihan");
                                     <h4 class="display-8 fw-bold"><br>Tidak dikenakan biaya</h4>
                                 </div>
                             </div>
+                            
                             <div>
                                 <p class="text mb-4"><?=$pelatiha['deskripsi']?></p>
                                 <!-- <ul class="list-unstyled">
