@@ -7,51 +7,79 @@ use Illuminate\Http\Request;
 
 class MateriController extends Controller
 {
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $materi = Materi::all();
-        return view('dashboard.materi.materi-index',compact('materi'));
+        //
     }
 
-
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        $data =  Materi::create($request->all());
-
-
-        return response()->json(['success' => 'Materi ditambahkan.',$data]);
+        //
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Materi  $materi
+     * @return \Illuminate\Http\Response
+     */
     public function show(Materi $materi)
     {
         //
     }
 
-    public function edit($id)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Materi  $materi
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Materi $materi)
     {
-        $materi = Materi::find($id);
-
-        return view('dashboard.materi.materi-edit',compact('materi'));
+        //
     }
 
-    public function update(Request $request,$id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Materi  $materi
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Materi $materi)
     {
-        $materi = Materi::find($id);
-        $materi->update($request->all());
-
-        return redirect()->route('materi');
+        //
     }
 
-    public function delete($id)
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Materi  $materi
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Materi $materi)
     {
-        $materi = Materi::find($id);
-        $materi->delete();
-        return redirect()->route('materi');
+        //
     }
 }

@@ -4,73 +4,82 @@ namespace App\Http\Controllers;
 
 use App\Models\Loker;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 
 class LokerController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        $loker = Loker::all();
-        return view('dashboard.loker.loker-index', compact('loker'));
+        //
     }
 
-
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
-    {
-        $dataAttr = [];
-        $dataAttr['nama'] = $request->nama;
-        $dataAttr['deskripsi'] = $request->deskripsi;
-        $dataAttr['foto'] = $request->foto;
-        $dataAttr['link'] = $request->link;
-
-        $data = Loker::create($dataAttr);
-
-        return response()->json(['success' => 'loker ditambahkan.', $data]);
-    }
-
-    public function show(loker $loker)
     {
         //
     }
 
-    public function edit($id)
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Loker  $loker
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Loker $loker)
     {
-        $loker = Loker::find($id);
-
-        return view('dashboard.loker.loker-edit', compact('loker'));
+        //
     }
 
-    public function update(Request $request, $id)
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Loker  $loker
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Loker $loker)
     {
-        $loker = Loker::find($id);
-
-        $loker->nama = $request->nama;
-        $loker->deskripsi = $request->deskripsi;
-        $loker->foto = $request->foto;
-        $loker->link = $request->link;
-
-        $loker->save();
-
-
-
-
-        return redirect()->route('loker');
+        //
     }
 
-    public function delete($id)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Loker  $loker
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Loker $loker)
     {
-        $loker = Loker::find($id);
-        if (File::exists('Foto Loker/' . $loker->image)) {
-            File::delete('Foto Loker/' . $loker->image);
-        } else {
-            File::delete('Foto Loker/' . $loker->image);
-        };
-        $loker->delete();
-        return redirect()->route('loker');
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Loker  $loker
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Loker $loker)
+    {
+        //
     }
 }
