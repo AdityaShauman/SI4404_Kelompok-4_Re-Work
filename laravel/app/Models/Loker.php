@@ -7,23 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Loker extends Model
 {
-    public $table = 'loker';
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable =
+    [
         'nama',
-        'deksripsi',
+        'deskripsi',
         'foto',
-        'link',
-    ];
-
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime'
+        'link'
     ];
 }

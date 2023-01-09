@@ -7,21 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pendaftaran extends Model
 {
-    public $table = 'pendaftaran';
     use HasFactory;
 
-    protected $fillable = [
-        'media',
+    protected $fillable =
+    [
+        'id_user',
+        'id_pelatihan',
         'status',
+        'bukti_pembayaran'
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime'
-    ];
+    public function User()
+    {
+        return $this->belongsTo(User::class,'id_user');
+    }
+    public function Pelatihan()
+    {
+        return $this->belongsTo(Pelatihan::class,'id_pelatihan');
+    }
 }

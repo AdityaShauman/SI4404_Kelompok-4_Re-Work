@@ -3,84 +3,54 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pelatihan;
-use App\Http\Requests\StorePelatihanRequest;
-use App\Http\Requests\UpdatePelatihanRequest;
+use Illuminate\Http\Request;
 
 class PelatihanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $pelatihan = Pelatihan::all();
+        return view('dashboard.pelatihan.pelatihan-index',compact('pelatihan'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorePelatihanRequest  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StorePelatihanRequest $request)
+    public function store(Request $request)
+    {
+        $data =  Pelatihan::create($request->all());
+
+
+        return response()->json(['success' => 'pelatihan ditambahkan.',$data]);
+    }
+
+    public function show(pelatihan $pelatihan)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Pelatihan  $pelatihan
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Pelatihan $pelatihan)
+    public function edit($id)
     {
-        //
+        $pelatihan = Pelatihan::find($id);
+
+        return view('dashboard.pelatihan.pelatihan-edit',compact('pelatihan'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Pelatihan  $pelatihan
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Pelatihan $pelatihan)
+    public function update(Request $request,$id)
     {
-        //
+        $pelatihan = Pelatihan::find($id);
+        $pelatihan->update($request->all());
+
+        return redirect()->route('pelatihan');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatePelatihanRequest  $request
-     * @param  \App\Models\Pelatihan  $pelatihan
-     * @return \Illuminate\Http\Response
-     */
-    public function update(UpdatePelatihanRequest $request, Pelatihan $pelatihan)
+    public function delete($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Pelatihan  $pelatihan
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Pelatihan $pelatihan)
-    {
-        //
+        $pelatihan = Pelatihan::find($id);
+        $pelatihan->delete();
+        return redirect()->route('pelatihan');
     }
 }
